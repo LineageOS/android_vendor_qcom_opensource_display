@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bfcbb3e_a1ffd68d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2022-01-26T20:24:36Z",
+      "side": 1,
+      "message": "This repository is only for vendor targets. These targets are in https://github.com/LineageOS/android_vendor_qcom_opensource_display-commonsys",
+      "revId": "821ba5a851c7bbe4738a92e607527b29859627dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
