@@ -1,6 +1,5 @@
-cc_library_shared {
-    name: "libqdMetaData",
-    vendor: true,
+cc_defaults {
+    name: "libqdMetaData_defaults",
     cflags: [
         "-Wno-sign-conversion",
         "-DLOG_TAG=\"qdmetadata\"",
@@ -11,7 +10,6 @@ cc_library_shared {
         "libcutils",
         "libutils",
         "libhidlbase",
-        "libgralloc.qti",
         "libgralloctypes",
     ],
     header_libs: ["libhardware_headers", "display_intf_headers"],
@@ -19,3 +17,16 @@ cc_library_shared {
     export_header_lib_headers: ["display_intf_headers"],
 }
 
+cc_library_shared {
+    defaults: ["libqdMetaData_defaults"],
+    name: "libqdMetaData",
+    vendor: true,
+    shared_libs: ["libgralloc.qti"]
+}
+
+cc_library_shared {
+    defaults: ["libqdMetaData_defaults"],
+    name: "libqdMetaData.system",
+    system_ext_specific: true,
+    shared_libs: ["libgralloc.system.qti"]
+}

@@ -1,6 +1,5 @@
-cc_library_shared {
-    name: "libgralloc.qti",
-    vendor: true,
+cc_defaults {
+    name: "libgralloc.qti_defaults",
     cflags: [
         "-Wno-sign-conversion",
         "-DLOG_TAG=\"qtigralloc\"",
@@ -20,3 +19,14 @@ cc_library_shared {
     header_libs: ["display_intf_headers"],
 }
 
+cc_library_shared {
+    defaults: ["libgralloc.qti_defaults"],
+    name: "libgralloc.qti",
+    vendor: true,
+}
+
+cc_library_shared {
+    defaults: ["libgralloc.qti_defaults"],
+    name: "libgralloc.system.qti",
+    system_ext_specific: true,
+}
